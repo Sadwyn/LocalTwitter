@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tweetsListContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/tweetItemCardView"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tweetUrl"
+        app:layout_constraintTop_toBottomOf="@+id/tweetUrl">
+
+        <ImageView
+            android:id="@+id/tweetImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/tweet_photo"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/tweetSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:singleLine="true"
+        android:text="Onliner.by"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tweetTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tweetTitle"
+        app:layout_constraintTop_toTopOf="@+id/tweetTitle" />
+
+    <TextView
+        android:id="@+id/tweetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:drawableEnd="@android:drawable/ic_menu_compass"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:singleLine="true"
+        android:text="Onliner.by"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tweetUserAvatar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tweetDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tweetTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tweetTitle" />
+
+    <ImageView
+        android:id="@+id/tweetUserAvatar"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/avatar"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tweetUrl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        android:singleLine="true"
+        android:text="auto.onliner.by/2019/02/19/min"
+        android:textColor="#6EBAEA"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tweetDescription"
+        app:layout_constraintTop_toBottomOf="@+id/tweetDescription" />
+
+    <ImageButton
+        android:id="@+id/tweetLikeButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tweetShareButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/reTweetButton"
+        app:layout_constraintTop_toBottomOf="@+id/tweetItemCardView"
+        app:srcCompat="@drawable/like_icon" />
+
+    <ImageButton
+        android:id="@+id/tweetShareButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tweetItemCardView"
+        app:layout_constraintStart_toEndOf="@+id/tweetLikeButton"
+        app:layout_constraintTop_toBottomOf="@+id/tweetItemCardView"
+        app:srcCompat="@drawable/share_icon" />
+
+    <ImageButton
+        android:id="@+id/reTweetButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tweetLikeButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tweetCommentButton"
+        app:layout_constraintTop_toBottomOf="@+id/tweetItemCardView"
+        app:srcCompat="@drawable/repost_icon" />
+
+    <ImageButton
+        android:id="@+id/tweetCommentButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/reTweetButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@id/tweetItemCardView"
+        app:layout_constraintTop_toBottomOf="@+id/tweetItemCardView"
+        app:srcCompat="@drawable/message_icon" />
+</android.support.constraint.ConstraintLayout>

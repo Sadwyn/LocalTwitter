@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="tweets">
+        <item>Tweet 1</item>
+        <item>Tweet 2</item>
+        <item>Tweet 3</item>
+        <item>Tweet 4</item>
+        <item>Tweet 5</item>
+        <item>Tweet 6</item>
+        <item>Tweet 7</item>
+        <item>Tweet 8</item>
+        <item>Tweet 9</item>
+        <item>Tweet 10</item>
+    </array>
+</resources>
